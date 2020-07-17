@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
-
+# install apache
 yum -y install httpd
-yum -y install php
+# install mysql
+yum -y install mariadb-server
+# install php
+yum -y install php php-mysqlnd
 
 # below doesn't work on SELinux enabled kernels (Centos 7)
 # since you can't set permissions of any sort on vbox shared folders
@@ -20,6 +23,3 @@ chcon  --user system_u --type httpd_sys_content_t -Rv /var/www/html
 rsync -r /vagrant/html/ /var/www/html/
 
 # start the httpd server
-# ** doesn't seem to start from this script
-# but it does start if i ssh into the box and start it
-# apachectl start
