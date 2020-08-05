@@ -19,5 +19,5 @@ var timeZone = map[string]TZ{ "UTC":UTC, "EST":EST }
 func main() {
 	fmt.Println("timeZone:", timeZone)
 	fmt.Println("weekend:", weekend)
-	fmt.Println("map:", timeZone["apple"])
+	fmt.Println("typeZone[\"EST\"]:", timeZone["EST"])
 }
