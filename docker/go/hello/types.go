@@ -1,5 +1,6 @@
-package main;
- 
+// goodbye is a program
+package main
+
 import (
 	"fmt"
 )
@@ -14,6 +15,7 @@ const (
 var weekend = []string{ "Saturday", "Sunday" }
 var timeZone = map[string]TZ{ "UTC":UTC, "EST":EST }
 
+// so uhm
 func main() {
 	fmt.Println("timeZone:", timeZone)
 	fmt.Println("weekend:", weekend)
