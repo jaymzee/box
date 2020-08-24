@@ -15,6 +15,10 @@ func main() {
 	foo(x)
 	fmt.Println("y =", y)
 	fmt.Println("len(y) =", len(y))
+
+	for i, el := range y {
+		fmt.Println(i, el)
+	}
 }
 
 func foo(arr [arr_size]float64) {
