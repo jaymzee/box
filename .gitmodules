@@ -1,0 +1,3 @@
+[submodule "docker/clojure"]
+	path = docker/clojure
+	url = https://github.com/jaymzee/clojure
