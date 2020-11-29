@@ -7,3 +7,6 @@
 [submodule "docker/go/github.com/jaymzee/go-dsp"]
 	path = docker/go/github.com/jaymzee/go-dsp
 	url = https://github.com/jaymzee/go-dsp
+[submodule "docker/haskell"]
+	path = docker/haskell
+	url = https://github.com/jaymzee/haskell
