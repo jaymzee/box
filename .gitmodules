@@ -1,3 +1,9 @@
 [submodule "docker/clojure"]
 	path = docker/clojure
 	url = https://github.com/jaymzee/clojure
+[submodule "docker/go/github.com/jaymzee/go"]
+	path = docker/go/github.com/jaymzee/go
+	url = https://github.com/jaymzee/go
+[submodule "docker/go/github.com/jaymzee/go-dsp"]
+	path = docker/go/github.com/jaymzee/go-dsp
+	url = https://github.com/jaymzee/go-dsp
