@@ -11,3 +11,4 @@ qemu-system options
 -device VGA,vgamem_mb=64
 -curses
 -m 256M
+-soundhw pcspk

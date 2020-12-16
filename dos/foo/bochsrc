@@ -1,0 +1,6 @@
+megs: 32
+ata0-master: type=disk, path=c.img, cylinders=243, heads=16, spt=63
+boot: c
+speaker: enabled=1,mode=system
+log: bochs.log
+mouse: enabled=0

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+megs=32
+cdrom=~/Downloads/FD12CD.iso
+hd=c.img
+
+qemu-system-x86_64 -m $megs -boot d -soundhw pcspk -accel hax \
+    -drive format=raw,if=ide,file=$hd
