@@ -8,6 +8,7 @@ GRUB_GFXPAYLOAD_LINUX=keep
 Ubuntu 20.04.2 LTS (Focal Fossa)
 packages installed:
 xorg, openbox, kitty
+LXTerminal, awesome
 w3m, fim
 numpy
 pygame 1.9.6 dependencies (sdl1.2, mixer, fonts, etc)
