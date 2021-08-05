@@ -1,28 +1,37 @@
-/etc/default/grub
+## Ubuntu 20.04.2 LTS (Focal Fossa)
+packages installed:
+- xorg
+- openbox
+- kitty
+- LXTerminal
+- awesome
+- w3m
+- fim
+- dependencies for pygame 1.9.6
+    - python3-dev libfreetype-dev libportmidi-dev
+    - libsdl-dev libsdl-ttf2.0-dev libsdl-mixer1.2-dev libsdl-image1.2-dev
+
+## Set Console Resolution
+Add the lines below to /etc/default/grub and then execute `update-grub`.
 ```
 GRUB_CMDLINE_LINUX_DEFAULT="nomodeset"
 GRUB_GFXMODE=1280x1024
 GRUB_GFXPAYLOAD_LINUX=keep
 ```
 
-Ubuntu 20.04.2 LTS (Focal Fossa)
-packages installed:
-xorg, openbox, kitty
-LXTerminal, awesome
-w3m, fim
-numpy
-pygame 1.9.6 dependencies (sdl1.2, mixer, fonts, etc)
+Start the X server from the console with `startx`
 
-```
-startx
-```
+The X server will use the current console resolution. It seems grub does not 
+support resolutions such as 1920x1080 for the console (it does not appear
+in any of the VESA video modes listed). You should be able to override the
+resolution that X uses. You'll need to generate an `xorg.conf` file using
+`X -configure`.
 
-to force a particular resolution, generate a xorg.conf
-```
-X -configure
-```
-then in the Screen section, Display subsection add
-```
-modes "1920x1080"
-```
-put the generated file in /etc/X11
+In the Screen section Display subsection add a modes line such as
+`modes "1920x1080"` and copy the xorg.conf to /etc/X11
+
+## videoinfo missing
+videoinfo (vbeinfo) is not installed and `hwinfo --framebuffer` reports nothing.
+There is a utility https://github.com/wfeldt/mdt that uses VESA BIOS functions
+to read monitor data and provides similar information that vbeinfo gives. You 
+also need libx86emu-dev to be installed.
