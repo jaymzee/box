@@ -30,8 +30,7 @@ resolution that X uses. You'll need to generate an `xorg.conf` file using
 In the Screen section Display subsection add a modes line such as
 `modes "1920x1080"` and copy the xorg.conf to /etc/X11
 
-## videoinfo missing
-videoinfo (vbeinfo) is not installed and `hwinfo --framebuffer` reports nothing.
-There is a utility https://github.com/wfeldt/mdt that uses VESA BIOS functions
-to read monitor data and provides similar information that vbeinfo gives. You 
-also need libx86emu-dev to be installed.
+## videoinfo (vbeinfo)
+Instead of running videoinfo (vbeinfo) from the grub command line, there is a
+utility https://github.com/wfeldt/mdt that provides the same info as vbeinfo.
+You need libx86emu-dev to be installed.
