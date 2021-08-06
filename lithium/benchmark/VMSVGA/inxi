@@ -1,0 +1,4 @@
+Graphics:
+  Device-1: VMware SVGA II Adapter driver: vmwgfx v: 2.15.0.0 
+  Display: server: X.Org 1.20.11 driver: vmware resolution: 1920x1080~60Hz 
+  OpenGL: renderer: SVGA3D; build v: 2.1 Mesa 21.0.3 

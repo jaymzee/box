@@ -1,0 +1,5 @@
+Graphics:
+  Device-1: InnoTek Systemberatung VirtualBox Graphics Adapter 
+  driver: vboxvideo v: 6.0.24 r139119 
+  Display: server: X.Org 1.20.11 driver: vmware resolution: 1920x1080~60Hz 
+  OpenGL: renderer: llvmpipe (LLVM 12.0.0 256 bits) v: 4.5 Mesa 21.0.3 

@@ -1,0 +1,7 @@
+vboxvideo              36864  0
+vboxsf                 81920  1
+vboxguest             348160  3 vboxsf
+vmwgfx                299008  2
+ttm                   106496  2 vmwgfx,vboxvideo
+drm_kms_helper        184320  2 vmwgfx,vboxvideo
+drm                   491520  6 vmwgfx,drm_kms_helper,vboxvideo,ttm

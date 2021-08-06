@@ -1,0 +1,5 @@
+GL_RENDERER   = llvmpipe (LLVM 12.0.0, 256 bits)
+GL_VERSION    = 3.1 Mesa 21.0.3
+GL_VENDOR     = Mesa/X.org
+2232 frames in 5.0 seconds = 446.314 FPS
+3741 frames in 5.0 seconds = 748.132 FPS
