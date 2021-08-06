@@ -1,19 +1,14 @@
 ## Ubuntu 20.04.2 LTS (Focal Fossa)
 packages installed:
-- xorg
-- openbox
-- kitty
-- LXTerminal
-- awesome
-- w3m
-- fim
-- pulseaudio
+- build-essential linux-headers-$(uname -r)
+- xorg w3m fim pulseaudio inxi
+- openbox awesome kitty LXTerminal
 - dependencies for pygame 1.9.6
     - python3-dev libfreetype-dev libportmidi-dev
     - libsdl-dev libsdl-ttf2.0-dev libsdl-mixer1.2-dev libsdl-image1.2-dev
 
 ## Set Console Resolution
-Add the lines below to /etc/default/grub and then execute `update-grub`.
+Add these lines to /etc/default/grub and update grub with `update-grub`.
 ```
 GRUB_CMDLINE_LINUX_DEFAULT="nomodeset"
 GRUB_GFXMODE=1280x1024
@@ -35,3 +30,7 @@ In the Screen section Display subsection add a modes line such as
 Instead of running videoinfo (vbeinfo) from the grub command line, there is a
 utility https://github.com/wfeldt/mdt that provides the same info as vbeinfo.
 You need libx86emu-dev to be installed.
+
+## OpenGL Renderer
+To use LLVMpipe (software rasterizer) instead of SVGA3D add nomodeset to the
+kernel cmdline in grub.
