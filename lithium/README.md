@@ -35,7 +35,7 @@ You need libx86emu-dev to be installed.
 To use LLVMpipe (software rasterizer) instead of SVGA3D add nomodeset to the
 kernel cmdline in grub.
 
-## vboxvideo
+## vboxvideo, vwmgfx, vmware, and OpenGL
 This driver is used for the VirtualBox VBoxSVGA and VMSVGA Graphics
 Controllers.
 
@@ -50,6 +50,13 @@ drawing) using this controller and kitty will work but the performance isn't
 great because it's using OpenGL with the software rasterizer. I also can't
 get the console screen resolution to remain at the value set in GRUB with
 this controller - it switches back to 800x600 during boot.
+
+To make sure X starts with any controller selected and the resulting OpenGL
+rendering mode, change the update-alternatives priorty of kitty to be lower
+than one of the other terminals so you can still bring up a terminal with the
+menu.
+
+TODO: benchmark performance of SVGA3D vs LLVMpipe with glxgears or equiv
 
 ## query audio
 ```
