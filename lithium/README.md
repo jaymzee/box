@@ -7,6 +7,7 @@ packages installed:
 - awesome
 - w3m
 - fim
+- pulseaudio
 - dependencies for pygame 1.9.6
     - python3-dev libfreetype-dev libportmidi-dev
     - libsdl-dev libsdl-ttf2.0-dev libsdl-mixer1.2-dev libsdl-image1.2-dev
