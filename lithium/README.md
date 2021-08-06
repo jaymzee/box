@@ -34,3 +34,34 @@ You need libx86emu-dev to be installed.
 ## OpenGL Renderer
 To use LLVMpipe (software rasterizer) instead of SVGA3D add nomodeset to the
 kernel cmdline in grub.
+
+## vboxvideo
+This driver is used for the VirtualBox VBoxSVGA and VMSVGA Graphics
+Controllers.
+
+VMSVGA is the controller that should be used since it's the only one that
+supports 3D acceleration in VirtualBox 6.1, However, it is using an older
+OpenGL and kitty does not support OpenGL < 3.3.
+
+VBoxSVGA is supposed to support 3D acceleration in VirtualBox 6.0 but I found
+the kernel still falls back to using the LLVMpipe (software rasterizer) for
+OpenGL instead of SVGA3D. I got okay frame rates with SDL (simple 2D line
+drawing) using this controller and kitty will work but the performance isn't
+great because it's using OpenGL with the software rasterizer. I also can't
+get the console screen resolution to remain at the value set in GRUB with
+this controller - it switches back to 800x600 during boot.
+
+## query audio
+```
+inxi -A
+lshw -C multimedia
+```
+## query display
+```
+inxi -G
+lshw -C display
+glxinfo | grep OpenGL
+glxgears -info
+lspci
+lsmod
+```
