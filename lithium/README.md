@@ -1,7 +1,7 @@
 ## Ubuntu 20.04.2 LTS (Focal Fossa)
 packages installed:
 - build-essential linux-headers-$(uname -r)
-- xorg w3m fim pulseaudio inxi
+- xorg w3m fim feh pulseaudio inxi
 - openbox awesome kitty LXTerminal
 - dependencies for pygame 1.9.6
     - python3-dev libfreetype-dev libportmidi-dev
