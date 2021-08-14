@@ -1,3 +1,5 @@
 executing DOS protected mode programs cause QEMU to exit with VCPU shutdown
 if the acceleration (hax) is enabled
-Intel HAXM v7.61 installed on Windows 10
+Windows 10
+Intel HAXM v7.6.1
+QEMU v5.0.0
