@@ -1,4 +1,5 @@
-FreeDOS 1.2
+## FreeDOS
+- FreeDOS 1.2
 - Turbo C++ 3.0
 - Borland C++ 5.0
 - MASM 6.11
@@ -6,10 +7,18 @@ FreeDOS 1.2
 - UCOS
 - PROCOMM
 
-installing FreeDOS 1.2 in VirtualBox
-    If you get invalid opcode when running the installer
-    at the boot menu press tab and add raw to the command line
+## FreeDOS 1.2
 
-    DJGPP GCC does not work if VT-x is not enabled for the virtual machine
+### VirtualBox
+if you get invalid opcode when running the FD12 installer
+at the initial boot menu press tab and add raw to the command line
 
-    to enable networking install FDNET with fdimples
+### Network
+enable networking by installing FDNET with FDIMPLES
+
+## FreeDOS 1.2 DJGPP
+```
+SET DJGPP=C:\DEVEL\DJGPP\DJGPP.ENV
+```
+GCC shipped with FreeDOS 1.2 does not work in VirtualBox unless
+VT-x is enabled for the virtual machine.
