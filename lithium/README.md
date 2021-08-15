@@ -25,12 +25,18 @@ fbset can be used to change the console resolution
 ```
 fbset -xres 1920 -yres 1080
 ```
+you can set this resolution in rc.local (i haven't tested this yet)
+```
+fbset -fb /dev/fb0 -xres 1920 -yres 1080
+export FRAMEBUFFER=/dev/fb0   # so X finds it
+```
 
 You can set the resolution that X uses. You'll need to generate an `xorg.conf`
 file using `X -configure`.
 
-In the Screen section Display subsection add a modes line `modes "1920x1080"`
-and copy the xorg.conf to /etc/X11
+In the section Screen subsection Display add `modes "1920x1080"`
+and copy the file xorg.conf to /etc/X11
+
 
 ## videoinfo (vbeinfo)
 Instead of running videoinfo (vbeinfo) from the grub command line, there is a
