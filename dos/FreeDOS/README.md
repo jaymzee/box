@@ -22,3 +22,16 @@ SET DJGPP=C:\DEVEL\DJGPP\DJGPP.ENV
 ```
 GCC shipped with FreeDOS 1.2 does not work in VirtualBox unless
 VT-x is enabled for the virtual machine.
+
+## FreeDOS 1.3 Networking with virtualbox
+install CRYNWR packet drivers with FDIMPLES
+add to autoexec.bat
+```
+SET MTCPCFG=C:\FDOS\MTCP.CFG
+C:\FDOS\DRIVERS\CRYNWR\PCNTPK.COM int=0x60
+C:\NET\MTCP\DHCP.EXE
+```
+MTCP.CFG should have at least
+```
+PACKETINT 0x60
+```
