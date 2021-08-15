@@ -1,7 +1,7 @@
 ## Ubuntu 20.04.2 LTS (Focal Fossa)
 packages installed:
 - build-essential linux-headers-$(uname -r)
-- xorg w3m fim feh pulseaudio inxi
+- xorg w3m fim feh pulseaudio inxi fbset
 - openbox awesome kitty LXTerminal
 - dependencies for pygame 1.9.6
     - python3-dev libfreetype-dev libportmidi-dev
@@ -17,14 +17,20 @@ GRUB_GFXPAYLOAD_LINUX=keep
 
 Start the X server from the console with `startx`
 
-The X server will use the current console resolution. It seems grub does not 
-support resolutions such as 1920x1080 for the console (it does not appear
-in any of the VESA video modes listed). You should be able to override the
-resolution that X uses. You'll need to generate an `xorg.conf` file using
-`X -configure`.
+The X server will use the current console resolution. Grub favors 4:3
+resolutions for the console not ones such as 1920x1080 (it does not appear
+in any of the VESA video modes listed).
 
-In the Screen section Display subsection add a modes line such as
-`modes "1920x1080"` and copy the xorg.conf to /etc/X11
+fbset can be used to change the console resolution
+```
+fbset -xres 1920 -yres 1080
+```
+
+You can set the resolution that X uses. You'll need to generate an `xorg.conf`
+file using `X -configure`.
+
+In the Screen section Display subsection add a modes line `modes "1920x1080"`
+and copy the xorg.conf to /etc/X11
 
 ## videoinfo (vbeinfo)
 Instead of running videoinfo (vbeinfo) from the grub command line, there is a
