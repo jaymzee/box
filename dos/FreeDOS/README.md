@@ -35,3 +35,6 @@ MTCP.CFG should have at least
 ```
 PACKETINT 0x60
 ```
+
+# other things
+CTTY changes the TTY to another device such as COM1
