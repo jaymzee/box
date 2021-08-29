@@ -36,7 +36,22 @@ trigger dump
 % echo dump >>/srv/cwfs.cmd
 ```
 
+## golang go
+install 1.4.3
+```
+% hget -o go1.4.3.tar.gz https://github.com/golang/go/archive/go1.4.3.tar.gz
+% tar xvf go1.4.3.tar.gz
+% cd go-go1.4.3/src
+% rc.all
+```
+
 ## other
+like dmesg
+```
+% cat /dev/kmesg
+```
+
+
 listing with line numbers
 ```
 sed '=' file | sed 'N;s/\n/: /'
