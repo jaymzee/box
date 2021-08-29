@@ -35,6 +35,57 @@ trigger dump
 ```
 % echo dump >>/srv/cwfs.cmd
 ```
+mount dump
+```
+mount /srv/boot /n/dump dump
+```
+
+## sysinfo
+lspci
+```
+% pci -v
+```
+
+list vesa modes
+```
+% aux/vga -p
+```
+
+mac addr and stats
+```
+% cat '#'l0/ether0/addr
+% cat '#'l0/ether0/stats
+% cat '#'l0/ether0/ifstats
+```
+
+lscpu
+```
+% aux/cpuid
+```
+
+```
+% cat '#'c/config
+```
+
+ioaddr
+```
+% cat '#'P/ioalloc
+```
+
+irq
+```
+% cat '#'P/irqalloc
+```
+
+listing with line numbers
+```
+% sed '=' file | sed 'N;s/\n/: /'
+```
+
+## dmesg
+```
+% cat /dev/kmesg
+```
 
 ## golang go
 install 1.4.3
@@ -43,16 +94,4 @@ install 1.4.3
 % tar xvf go1.4.3.tar.gz
 % cd go-go1.4.3/src
 % rc.all
-```
-
-## other
-like dmesg
-```
-% cat /dev/kmesg
-```
-
-
-listing with line numbers
-```
-sed '=' file | sed 'N;s/\n/: /'
 ```
