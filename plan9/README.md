@@ -40,6 +40,21 @@ mount dump
 mount /srv/boot /n/dump dump
 ```
 
+## serial
+COM1 and COM2 are /dev/eia0 and /dev/eia1 respectively
+
+### serial console
+plan9.ini
+```
+console=0 b19200
+```
+
+$home/bin/rc/riostart
+```
+# run a system shell on the serial console
+~ $#console 0 || window -scroll console
+```
+
 ## sysinfo
 lspci
 ```
