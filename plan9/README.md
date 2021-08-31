@@ -110,3 +110,8 @@ install 1.4.3
 % cd go-go1.4.3/src
 % rc.all
 ```
+
+## hexdump
+```
+xd file
+```
